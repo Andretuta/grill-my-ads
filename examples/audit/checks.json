@@ -1,0 +1,17 @@
+[
+ {"id":"M01","category":"pixel","severity":"critical","result":"pass","title":"Pixel firing on key pages"},
+ {"id":"M02","category":"pixel","severity":"critical","result":"fail","title":"CAPI not active","fix_minutes":15},
+ {"id":"M03","category":"pixel","severity":"critical","result":"na","title":"Dedup (needs CAPI)"},
+ {"id":"M04","category":"pixel","severity":"critical","result":"warning","title":"EMQ Purchase 6.1"},
+ {"id":"M05","category":"pixel","severity":"high","result":"fail","title":"Domain not verified","fix_minutes":5},
+ {"id":"M25","category":"creative","severity":"critical","result":"pass","title":"3 formats active"},
+ {"id":"M26","category":"creative","severity":"high","result":"warning","title":"3 creatives in ad set"},
+ {"id":"M27","category":"creative","severity":"high","result":"pass","title":"9:16 video present"},
+ {"id":"M-CR4","category":"creative","severity":"high","result":"pass","title":"Link CTR 1.4%"},
+ {"id":"M13","category":"structure","severity":"critical","result":"warning","title":"Ad set Learning Limited"},
+ {"id":"M17","category":"structure","severity":"high","result":"fail","title":"Budget < (CPA x 50)/7"},
+ {"id":"M18","category":"structure","severity":"high","result":"pass","title":"Objective matches goal"},
+ {"id":"M39","category":"structure","severity":"medium","result":"pass","title":"UTMs on URLs"},
+ {"id":"M22","category":"audience","severity":"medium","result":"pass","title":"Advantage+ audience"},
+ {"id":"M23","category":"audience","severity":"high","result":"fail","title":"Subscribers not excluded","fix_minutes":10}
+]

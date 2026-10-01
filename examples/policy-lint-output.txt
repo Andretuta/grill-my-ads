@@ -1,0 +1,9 @@
+## Ad 1: OK
+## Ad 2: 2 finding(s)
+- [HIGH] guaranteed-results: "garantido" -> Remove guaranteed/absolute outcome claims (a money-back guarantee on the product is fine; say it precisely).
+- [LOW] sensational: "!!" -> Tone down caps/exclamations.
+## Ad 3: 2 finding(s)
+- [HIGH] personal-attribute: "Cansada da sua barriga" -> Rephrase without targeting the viewer's body/finances.
+- [HIGH] weight-loss-claim: "Perca 5kg" -> Specific weight-loss claims are restricted; remove numbers/timeframes.
+
+Heuristic only; final check is Meta review / Advertising Standards.
