@@ -23,8 +23,8 @@ A maior parte da verba de anúncio é perdida antes da primeira impressão: obje
 
 | Comando | O que acontece |
 |---|---|
-| `/grill-my-ads` | Te entrevista em rodadas, com perguntas numeradas e uma resposta recomendada em cada uma. Pesquisa o objetivo e o destino mais viáveis e escreve de 3 a 5 conceitos realmente diferentes. Gera um vídeo do produto a partir do código (via [brag](https://github.com/latent-spaces/brag)). Monta campanha, conjunto, criativos e anúncios **em rascunho**, mostra as prévias e **só publica com um "ok" explícito** |
-| `/grill-my-ads --repo` | O mesmo fluxo, mas antes lê o projeto atual (landing page, preços, rotas, fluxo real do usuário) para adiantar a entrevista e permitir gerar o vídeo do produto a partir do código. **Só quando você pede**: o padrão nunca mexe nos seus arquivos |
+| `/grill-my-ads` | Te entrevista em rodadas, com perguntas numeradas e uma resposta recomendada em cada uma. Pesquisa o objetivo e o destino mais viáveis e escreve de 3 a 5 conceitos realmente diferentes. Usa as suas fotos/vídeos ou escreve um roteiro de vídeo UGC. Monta campanha, conjunto, criativos e anúncios **em rascunho**, mostra as prévias e **só publica com um "ok" explícito** |
+| `/grill-my-ads --repo` | O mesmo fluxo, mas antes lê o projeto atual (landing page, preços, rotas, fluxo real do usuário) para adiantar a entrevista e gerar o vídeo do produto a partir do código (via [brag](https://github.com/latent-spaces/brag)). **Só quando você pede**: o padrão nunca mexe nos seus arquivos |
 | `/grill-my-ads audit` | Auditoria da conta, só leitura: cerca de 40 checagens (pixel/CAPI, diversidade e fadiga de criativo, estrutura, público, compliance). Devolve nota de 0 a 100, conceito de A a F e as correções rápidas |
 | `/grill-my-ads roi` | Cruza o gasto no Meta com os **seus** dados (pedidos, leads qualificados, membros que ficaram). Calcula CPA real, ROAS comparado ao ROAS de equilíbrio e lucro, e diz por anúncio se é para ESCALAR, MANTER ou CORTAR |
 

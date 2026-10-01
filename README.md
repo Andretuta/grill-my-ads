@@ -23,8 +23,8 @@ Most ad money is lost before the first impression: wrong objective, no margin ma
 
 | Command | What happens |
 |---|---|
-| `/grill-my-ads` | Grills you in rounds (numbered questions, each with a recommended answer) → researches the most viable objective/destination → writes 3–5 genuinely different concepts → generates a product video from your code (via [brag](https://github.com/latent-spaces/brag)) → builds campaign, ad set, creatives and ads **as drafts** → shows previews → publishes **only on explicit "ok"** |
-| `/grill-my-ads --repo` | Same flow, but first reads the current project (landing page, pricing, routes, real user flow) to prefill the interview and enable a product video from the code. **Only when you ask** — the default never touches your files |
+| `/grill-my-ads` | Grills you in rounds (numbered questions, each with a recommended answer) → researches the most viable objective/destination → writes 3–5 genuinely different concepts → uses your photos/videos or writes a UGC video script → builds campaign, ad set, creatives and ads **as drafts** → shows previews → publishes **only on explicit "ok"** |
+| `/grill-my-ads --repo` | Same flow, but first reads the current project (landing page, pricing, routes, real user flow) to prefill the interview and render a product video from the code (via [brag](https://github.com/latent-spaces/brag)). **Only when you ask** — the default never touches your files |
 | `/grill-my-ads audit` | Read-only account audit: ~40 checks (pixel/CAPI, creative diversity & fatigue, structure, audience, compliance) → 0–100 score, A–F grade, quick wins |
 | `/grill-my-ads roi` | Joins Meta spend with **your** business data (orders, qualified leads, retained members) → real CPA, ROAS vs breakeven ROAS, profit, and a SCALE / KEEP / CUT verdict per ad |
 
