@@ -1,6 +1,6 @@
 # Reading the repo to build the ad
 
-Adapted from brag's `step-1-inspect.md` (MIT). **Only after the user says yes.**
+Adapted from brag's `step-1-inspect.md` (MIT). **Opt-in only:** run when the user passed `--repo` or explicitly asked to use the project's code. Never on your own initiative.
 
 ## Read, in priority order
 1. **Landing / marketing page** — `index.html`, `app/page.*`, `pages/index.*`, `src/App.*`: title, hero headline, tagline, section headings, CTAs, testimonials, pricing, FAQ. This is the product's own voice.

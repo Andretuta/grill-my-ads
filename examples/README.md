@@ -3,7 +3,7 @@
 | File | Shows |
 |---|---|
 | [session-create.md](session-create.md) | Full `/grill-my-ads` run: context → rounds (❓/➡️) → push-back on budget → viability table → plan → MCP calls → preview → publish gate |
-| [session-repo-mode.md](session-repo-mode.md) | Asking permission to read the repo, inferences table, video generation with brag |
+| [session-repo-mode.md](session-repo-mode.md) | Opt-in `--repo` mode: inferences table, video generation with brag |
 | [roi/](roi/) | `meta.csv` + `biz.csv` → `expected-output.md` from `roi.py report --margin 0.49 --tax 0.1215` |
 | [audit/](audit/) | `checks.json` → `expected-output.md` from `audit_score.py` |
 | [copy.txt](copy.txt) | 3 ads → [policy-lint-output.txt](policy-lint-output.txt) from `policy_lint.py --file` |

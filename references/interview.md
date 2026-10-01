@@ -43,7 +43,7 @@ Technique: Matt Pocock's `grilling` (rounds over a design tree). Question bank: 
 ### Round 4 — Assets & tracking (needs Q2–Q3)
 | # | Question | Notes |
 |---|---|---|
-| Q17 | **What creative do you have?** photos, videos, UGC, testimonials, brand kit | If repo was read, propose video generation |
+| Q17 | **What creative do you have?** photos, videos, UGC, testimonials, brand kit | If `--repo` was used, propose video generation; otherwise ask for media or offer a UGC script |
 | Q18 | **Who can appear on camera?** (founder/customers/creators) | UGC beats polished |
 | Q19 | **Destination URL / WhatsApp number / form fields** | Check page speed (<3s) and message match |
 | Q20 | **Tracking**: pixel on site? CAPI? thank-you page event? CRM? | If missing, recommend minimum fix or a non-pixel objective |
@@ -59,7 +59,7 @@ Technique: Matt Pocock's `grilling` (rounds over a design tree). Question bank: 
 | Q26 | Approve kill/scale rules and review dates |
 | Q27 | Approve the build plan → create as draft |
 
-## Repo-mode shortcuts
+## Repo-mode shortcuts (`--repo` only)
 If `read-repo.md` ran, prefill Q1, Q3 (partially), Q12–Q14, Q17, Q19, Q22 from the code and ask only: "I inferred X — correct?" in one round.
 
 ## Push-back library

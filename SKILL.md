@@ -1,6 +1,6 @@
 ---
 name: grill-my-ads
-description: Relentless grill-me style interview that turns a product (or the repo you're in) into Meta Ads (Facebook/Instagram/WhatsApp/Messenger) via the official Meta Ads MCP. Asks rounds of questions with recommended answers, reads the codebase (with permission) to build the ad, generates a product video, researches the most viable objective/destination, builds everything as a draft and only publishes on explicit "ok". Also audits accounts and computes real ROI. Use when the user says "/grill-my-ads", "grill my ads", "grill me about my ad", "help me advertise this", "create a Facebook/Instagram ad", "set up a Meta campaign", "audit my ads", "ads ROI", "paid traffic", "tráfego pago", "criar anúncio", "gestão de tráfego".
+description: Relentless grill-me style interview that turns a product (or the repo you're in) into Meta Ads (Facebook/Instagram/WhatsApp/Messenger) via the official Meta Ads MCP. Asks rounds of questions with recommended answers, can read the codebase to build the ad when you ask (`--repo`), generates a product video, researches the most viable objective/destination, builds everything as a draft and only publishes on explicit "ok". Also audits accounts and computes real ROI. Use when the user says "/grill-my-ads", "grill my ads", "grill me about my ad", "help me advertise this", "create a Facebook/Instagram ad", "set up a Meta campaign", "audit my ads", "ads ROI", "grill my ads from this repo", "paid traffic", "tráfego pago", "criar anúncio", "gestão de tráfego".
 ---
 
 # /grill-my-ads
@@ -13,11 +13,12 @@ You are a senior media buyer who **interviews before spending one cent**. Reply 
 
 | Invocation | Flow |
 |---|---|
-| `/grill-my-ads` or `/grill-my-ads <product/idea>` | **Create** (below) |
+| `/grill-my-ads` or `/grill-my-ads <product/idea>` | **Create** (below), interview only |
+| `/grill-my-ads --repo` (or "build the ad from this repo/code") | **Create** + read the current repo first (Phase 1) |
 | `/grill-my-ads audit [account/campaign]` | [references/audit.md](references/audit.md) — read-only |
 | `/grill-my-ads roi [file/sheet]` | [references/roi.md](references/roi.md) — read-only on Meta |
 
-Optional flags for Create: `--no-repo` (don't offer to read files), `--video` (force video generation), `--budget <amount>/day`.
+Optional flags for Create: `--repo` (read the current project to prefill the interview), `--video` (force video generation), `--budget <amount>/day`.
 
 ## Rules for EVERY flow
 
@@ -55,11 +56,10 @@ Each script has a `--selftest` flag. Examples of inputs/outputs live in [example
 
 Show a short "📋 What I already know" table (account, currency, Page, IG, pixel, history) and continue.
 
-### Phase 1 — Repository (optional, with permission)
-If the working directory looks like a project (`package.json`, `index.html`, `README.md`, `app/`, `src/`…) and `--no-repo` wasn't passed, ask:
-> ❓ I found a project here (`<name>`). Can I read the files to build the ad from the real product? ➡️ Recommend yes — it cuts the interview in half.
+### Phase 1 — Repository (opt-in only)
+**Skip this phase unless** the user passed `--repo` or explicitly asked to use the code/project ("build the ad from this repo", "read my site's code"). Never offer it unprompted and never read project files on your own — the default flow is interview only.
 
-On yes, follow [references/read-repo.md](references/read-repo.md) and draft `ads/product-context.md` (template: [assets/product-context.template.md](assets/product-context.template.md)). On no, everything comes from the interview.
+When requested: confirm the folder in one line ("Reading `<name>` — skipping `.env`, keys and build output."), follow [references/read-repo.md](references/read-repo.md) and draft `ads/product-context.md` (template: [assets/product-context.template.md](assets/product-context.template.md)). The interview then only confirms inferences and fills gaps.
 
 ### Phase 2 — The grill (rounds)
 Follow [references/interview.md](references/interview.md). Mandatory round format:
@@ -88,7 +88,7 @@ Pick **objective + destination + format** with [references/objectives-destinatio
 ### Phase 4 — Creative
 Follow [references/copy-and-creative.md](references/copy-and-creative.md).
 - **User media** (image/video): validate specs (ratio, length, captions, 0–3s hook) before upload.
-- **No media + repo read** → offer to generate a video with the brag pipeline: [references/video-brag.md](references/video-brag.md) (9:16 + 4:5).
+- **No media + repo read (`--repo`)** → offer to generate a video with the brag pipeline: [references/video-brag.md](references/video-brag.md) (9:16 + 4:5).
 - **No media, no repo** → script + UGC brief ([assets/video-script.template.md](assets/video-script.template.md)) and/or a static image from a URL the user provides.
 - Write **3–5 genuinely different concepts** (angle, motivator, format — not color tweaks). Each: short + long primary text, 2 headlines, description, CTA.
 - Run `python scripts/policy_lint.py` on all copy ([references/policy-and-compliance.md](references/policy-and-compliance.md)).

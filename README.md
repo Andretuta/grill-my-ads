@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>A relentless media buyer in your terminal.</b><br>
-  A Claude skill that grills you about your product, reads your repo, and builds Meta ads (Facebook · Instagram · WhatsApp · Messenger) through the official Meta Ads MCP — as drafts, published only on your "ok".
+  A Claude skill that grills you about your product (and, if you ask, reads your repo) and builds Meta ads (Facebook · Instagram · WhatsApp · Messenger) through the official Meta Ads MCP — as drafts, published only on your "ok".
 </p>
 
 <p align="center">
@@ -23,14 +23,16 @@ Most ad money is lost before the first impression: wrong objective, no margin ma
 
 | Command | What happens |
 |---|---|
-| `/grill-my-ads` | Grills you in rounds (numbered questions, each with a recommended answer) → optionally reads your repo (with permission) → researches the most viable objective/destination → writes 3–5 genuinely different concepts → generates a product video from your code (via [brag](https://github.com/latent-spaces/brag)) → builds campaign, ad set, creatives and ads **as drafts** → shows previews → publishes **only on explicit "ok"** |
+| `/grill-my-ads` | Grills you in rounds (numbered questions, each with a recommended answer) → researches the most viable objective/destination → writes 3–5 genuinely different concepts → generates a product video from your code (via [brag](https://github.com/latent-spaces/brag)) → builds campaign, ad set, creatives and ads **as drafts** → shows previews → publishes **only on explicit "ok"** |
+| `/grill-my-ads --repo` | Same flow, but first reads the current project (landing page, pricing, routes, real user flow) to prefill the interview and enable a product video from the code. **Only when you ask** — the default never touches your files |
 | `/grill-my-ads audit` | Read-only account audit: ~40 checks (pixel/CAPI, creative diversity & fatigue, structure, audience, compliance) → 0–100 score, A–F grade, quick wins |
 | `/grill-my-ads roi` | Joins Meta spend with **your** business data (orders, qualified leads, retained members) → real CPA, ROAS vs breakeven ROAS, profit, and a SCALE / KEEP / CUT verdict per ad |
 
 ### Highlights
 - **Facts it looks up, decisions you make.** Account, Page, IG, pixel, history → fetched via MCP. Budget, offer, approval → asked.
-- **Repo → ad.** Reads your landing page, pricing, routes and real user flow; never reads `.env`, keys or secrets.
-- **Video creatives.** Uses your media or renders a 9:16 + 4:5 product video from the codebase.
+- **Works for any product.** The interview alone is enough — coffee, courses, local services, SaaS.
+- **Repo → ad, opt-in.** With `--repo` it reads your landing page, pricing, routes and real user flow; never `.env`, keys or secrets. Without it, it never reads your files.
+- **Video creatives.** Uses your media, writes a UGC script, or (with `--repo`) renders a 9:16 + 4:5 product video from the codebase.
 - **Safety first.** Draft/PAUSED by default, pause-never-delete, never infers budget, never invents interest IDs, ≤20% budget steps, policy linter on every line of copy, AI-disclosure always asked.
 - **Up to date (2026).** Advantage+ unification, Andromeda creative diversity, Jan-2026 attribution window removal, Brazil's 12.15% ad-tax pass-through, LGPD/GDPR notes.
 
@@ -50,7 +52,7 @@ git clone https://github.com/Andretuta/grill-my-ads ~/.claude/skills/grill-my-ad
 
 **Claude.ai** — download the repo as ZIP and upload it in *Customize → Skills*.
 
-Then just say `/grill-my-ads` (or "grill me about my ad").
+Then just say `/grill-my-ads` (or "grill me about my ad"). Inside a code project, use `/grill-my-ads --repo` to build the ad from the code.
 
 ## Helper scripts
 

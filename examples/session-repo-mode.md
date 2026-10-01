@@ -1,13 +1,10 @@
-# Example: repo mode + generated video
+# Example: repo mode (`--repo`) + generated video
 
 Fictional repo: `snapinvoice/`, a Next.js app that turns a photo of a receipt into an invoice.
 
-**User:** /grill-my-ads
+**User:** /grill-my-ads --repo
 
-**Claude:** ❓ I found a project here (`snapinvoice`, Next.js). Can I read the files to build the ad from the real product?
-➡️ Recommend yes. It cuts the interview in half. I skip `.env`, keys and build output.
-
-**User:** sim
+**Claude:** Reading `snapinvoice` (Next.js) — skipping `.env`, keys and build output.
 
 **Claude (after read-repo.md)**: Here's what I took from the code:
 

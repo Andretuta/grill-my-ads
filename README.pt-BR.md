@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Um gestor de tráfego implacável no seu terminal.</b><br>
-  Uma skill do Claude que te entrevista sobre o produto, lê o seu repositório e monta anúncios no Meta (Facebook · Instagram · WhatsApp · Messenger) pelo MCP oficial do Meta Ads, sempre como rascunho. Só publica com o seu "ok".
+  Uma skill do Claude que te entrevista sobre o produto (e, se você pedir, lê o seu repositório) e monta anúncios no Meta (Facebook · Instagram · WhatsApp · Messenger) pelo MCP oficial do Meta Ads, sempre como rascunho. Só publica com o seu "ok".
 </p>
 
 <p align="center">
@@ -23,14 +23,16 @@ A maior parte da verba de anúncio é perdida antes da primeira impressão: obje
 
 | Comando | O que acontece |
 |---|---|
-| `/grill-my-ads` | Te entrevista em rodadas, com perguntas numeradas e uma resposta recomendada em cada uma. Se você deixar, lê o repositório. Pesquisa o objetivo e o destino mais viáveis e escreve de 3 a 5 conceitos realmente diferentes. Gera um vídeo do produto a partir do código (via [brag](https://github.com/latent-spaces/brag)). Monta campanha, conjunto, criativos e anúncios **em rascunho**, mostra as prévias e **só publica com um "ok" explícito** |
+| `/grill-my-ads` | Te entrevista em rodadas, com perguntas numeradas e uma resposta recomendada em cada uma. Pesquisa o objetivo e o destino mais viáveis e escreve de 3 a 5 conceitos realmente diferentes. Gera um vídeo do produto a partir do código (via [brag](https://github.com/latent-spaces/brag)). Monta campanha, conjunto, criativos e anúncios **em rascunho**, mostra as prévias e **só publica com um "ok" explícito** |
+| `/grill-my-ads --repo` | O mesmo fluxo, mas antes lê o projeto atual (landing page, preços, rotas, fluxo real do usuário) para adiantar a entrevista e permitir gerar o vídeo do produto a partir do código. **Só quando você pede**: o padrão nunca mexe nos seus arquivos |
 | `/grill-my-ads audit` | Auditoria da conta, só leitura: cerca de 40 checagens (pixel/CAPI, diversidade e fadiga de criativo, estrutura, público, compliance). Devolve nota de 0 a 100, conceito de A a F e as correções rápidas |
 | `/grill-my-ads roi` | Cruza o gasto no Meta com os **seus** dados (pedidos, leads qualificados, membros que ficaram). Calcula CPA real, ROAS comparado ao ROAS de equilíbrio e lucro, e diz por anúncio se é para ESCALAR, MANTER ou CORTAR |
 
 ### Destaques
 - **Fatos ela busca, decisões são suas.** Conta, página, IG, pixel e histórico vêm do MCP. Orçamento, oferta e aprovação ela pergunta.
-- **Do repositório ao anúncio.** Lê a landing page, os preços, as rotas e o fluxo real do usuário. Nunca lê `.env`, chaves ou segredos.
-- **Criativos em vídeo.** Usa a sua mídia ou renderiza um vídeo do produto em 9:16 e 4:5 a partir do código.
+- **Funciona para qualquer produto.** Só a entrevista já basta: café, curso, serviço local, SaaS.
+- **Do repositório ao anúncio, só se você pedir.** Com `--repo`, lê a landing page, os preços, as rotas e o fluxo real do usuário, e nunca `.env`, chaves ou segredos. Sem a flag, não lê nenhum arquivo seu.
+- **Criativos em vídeo.** Usa a sua mídia, escreve um roteiro de UGC ou, com `--repo`, renderiza um vídeo do produto em 9:16 e 4:5 a partir do código.
 - **Segurança em primeiro lugar:**
   - tudo nasce em rascunho/PAUSADO;
   - pausa, nunca apaga;
@@ -61,7 +63,7 @@ git clone https://github.com/Andretuta/grill-my-ads ~/.claude/skills/grill-my-ad
 
 **Claude.ai:** baixe o repositório como ZIP e envie em *Personalizar → Skills*.
 
-Depois é só digitar `/grill-my-ads` (ou "me entrevista pra criar um anúncio").
+Depois é só digitar `/grill-my-ads` (ou "me entrevista pra criar um anúncio"). Dentro de um projeto de código, use `/grill-my-ads --repo` para montar o anúncio a partir do código.
 
 ## Scripts auxiliares
 
@@ -92,7 +94,7 @@ examples/             sessões completas de exemplo + entradas/saídas de exempl
 
 Veja [`examples/`](examples/):
 - uma sessão completa de entrevista, em que a skill contesta um orçamento baixo e monta a tabela de viabilidade;
-- uma sessão lendo o repositório, com geração de vídeo;
+- uma sessão com `--repo`, lendo o projeto e gerando o vídeo;
 - entradas e saídas esperadas para ROI, auditoria e linter de política.
 
 ## Aviso
