@@ -62,7 +62,16 @@ Show a short "📋 What I already know" table (account, currency, Page, IG, pixe
 When requested: confirm the folder in one line ("Reading `<name>` — skipping `.env`, keys and build output."), follow [references/read-repo.md](references/read-repo.md) and draft `ads/product-context.md` (template: [assets/product-context.template.md](assets/product-context.template.md)). The interview then only confirms inferences and fills gaps.
 
 ### Phase 2 — The grill (rounds)
-Follow [references/interview.md](references/interview.md). Mandatory round format:
+Follow [references/interview.md](references/interview.md).
+
+**Ask through the harness's native question UI whenever it has one** (Claude Code / Claude desktop `AskUserQuestion`, Codex `request_user_input`, or any equivalent structured-question tool) — never type the questions into chat when such a tool exists. Rules for the tool:
+- One call per round; if the frontier exceeds the tool's limit (`AskUserQuestion`: 4 questions, 2–4 options each), split it into consecutive calls before recomputing.
+- Your recommendation is the **first option**, labeled `(Recomendado)`/`(Recommended)` in the user's language, with the one-line why in its description.
+- Open-ended answers (budget, margin, URLs, numbers): offer 2–3 concrete typical values as options; the tool's built-in "Other" field takes free text. Never add your own "Other" option.
+- Short `header` chip per question (≤12 chars). Use `multiSelect` only when answers aren't mutually exclusive (e.g. placements, assets they have).
+- Context the user needs before answering (what you found in the MCP, the viability table) goes in a short chat message **before** the tool call, not inside it.
+
+Fallback — only when no such tool exists — mandatory text format:
 
 ```
 ❓ **Q1** - **<title>**: <question, with options when relevant>

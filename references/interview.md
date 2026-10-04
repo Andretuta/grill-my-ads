@@ -3,7 +3,7 @@
 Technique: Matt Pocock's `grilling` (rounds over a design tree). Question bank: Digitizers' 23 intake questions + brag's 9-question rubric + traffic-manager onboarding briefs + Hormozi/Schwartz (see [offer-and-awareness.md](offer-and-awareness.md)).
 
 ## How to run it
-1. **Frontier = every question whose prerequisites are settled.** Ask the whole frontier in one numbered round, each with your recommendation (➡️). Wait.
+1. **Frontier = every question whose prerequisites are settled.** Ask the whole frontier in one round, each with your recommendation — via the native question tool when the harness has one (see SKILL.md Phase 2), else as numbered text with ➡️. Wait.
 2. Skip anything already answered by: the repo read, `ads/product-context.md`, the MCP context (Phase 0), or earlier answers.
 3. **Never ask facts you can look up** (account, Page, pixel, past CPA, competitors). Look them up, then show what you found.
 4. Recommendations must be concrete ("R$40/day CBO, 1 ad set, Brazil 18–55, Advantage+") — never "it depends".

@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="README.md">🇺🇸 Read in English</a>
+  <br><br><a href="https://m8ven.ai/mcp/andretuta-grill-my-ads-1cefy2?s=readme"><img src="https://m8ven.ai/badge/mcp/andretuta-grill-my-ads-1cefy2?variant=verified&v=f45c281cd97490ed874dbea0b8e2ea3e" alt="M8ven Verified"></a>
 </p>
 
 ---
